@@ -9,13 +9,25 @@ import { Container, Box, Button, Menu, MenuItem, Avatar } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
 import DashboardIcon from '@mui/icons-material/Dashboard';
+import HomeIcon from '@mui/icons-material/Home';
+import TrendingDownOutlinedIcon from '@mui/icons-material/TrendingDownOutlined';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import FlashOnIcon from '@mui/icons-material/FlashOn';
+import Logo from './Pics/Ecommerce-Logo-Design-Graphics-32523051-1.jpg';
+
 const pages = [
 
-    { title: 'Home', link: '/' },
-    { title: 'Products', link: '/products' },
-    { title: 'Blog', link: '/blog' },
-    { title: 'About Us', link: '/About' }
-    ,
+    { title: 'Home', Icon:HomeIcon ,link: '/' },  
+    { title: 'Shoes', Icon:HomeIcon , link: '/Shoes' },
+    { title: 'T-Shirts',Icon:HomeIcon  ,link: '/T-Shirts' },
+    { title: 'Electronics',Icon:FlashOnIcon  , link: '/Eeletronics' }, 
+    { title: 'Sale', Icon:TrendingDownOutlinedIcon , link: '/sale' }, 
+    { title: 'Become A saler',Icon:PointOfSaleIcon , link: '/saler' },
+    { title: 'More',Icon:ExpandMoreIcon  , link: '/More' },
+    { title: 'Add to Cart',Icon:AddShoppingCartIcon  ,link: '/cart' },  
+
 ];
 
 const settings = [
@@ -50,20 +62,22 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="fixed">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleOpenNavMenu} sx={{ mr: 2, display: { md: 'none' } }}>
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" component={Link} to="/" sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit' }}>
-                        Your Logo
-                    </Typography>
+                    <Typography variant="h6" component={Link} to="/" sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
+                        <img src={Logo} alt="Your Logo" style={{ display: { xs: 'none', md: 'flex' }, margin: '5px', maxWidth: '80px', borderRadius: '70px' }} />
+                        Your best shopping site
+                    </Typography> 
                     {/* for maki the reposive bar  */}
                     <Box sx={{ display: { xs: 'block', md: 'none' } }}>
                         <Menu anchorEl={anchorElNav} keepMounted open={Boolean(anchorElNav)} onClose={handleCloseNavMenu}>
                             {pages.map((page) => (
                                 <MenuItem key={page.title} onClick={handleCloseNavMenu} component={Link} to={page.link}>
+                                    <page.Icon style={{marginRight:"5px"}} /> 
                                     {page.title}
                                 </MenuItem>
                             ))}
@@ -73,6 +87,7 @@ function ResponsiveAppBar() {
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button key={page.title} component={Link} to={page.link} color="inherit" sx={{ mx: 2 }}>
+                               <page.Icon  /> 
                                 {page.title}
                             </Button>
                         ))}
