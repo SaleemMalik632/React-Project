@@ -1,7 +1,6 @@
-import Nav from './Component/Nav';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Text from './Component/Text';
-import Slider  from './Component/Slider';
+import Nav from './Component/Nav';
+import ShoeSHome from './Component/ShoeSHome';
 import Testing from './Component/Testing';
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
         <Nav /> 
         <Testing/>
         <Routes>
-          <Route exact path="/" element={< Text />} />
+          <Route exact path="/" element={< ShoeSHome />} /> 
           <Route path="/products" element={'< Text products  />'} />
           <Route path="/blog" element={'text this blog '} /> 
           <Route path="/about" element={'< Text abouts  />'} />
