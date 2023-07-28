@@ -1,19 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './Component/Nav';
-import ShoeSHome from './Component/ShoeSHome';
-import Testing from './Component/Testing';
+import Home from './Component/Home';
+import Shoesitem from './Component/Shoesitem';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Nav /> 
-        <Testing/>
+   
         <Routes>
-          <Route exact path="/" element={< ShoeSHome />} /> 
-          <Route path="/products" element={'< Text products  />'} />
-          <Route path="/blog" element={'text this blog '} /> 
+          <Route exact path="/" element={< Home />} /> 
+          <Route path="/Shoes" element={<Shoesitem/>} />
+          <Route path="/blog" element={'text this blog '} />  
           <Route path="/about" element={'< Text abouts  />'} />
+          <Route path="/New" element={'< Text abouts  />'} />
         </Routes>
       </BrowserRouter>
     </div>

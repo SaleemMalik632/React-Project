@@ -16,7 +16,7 @@ const ImageSlider = () => {
 
     return (
         <div style={{ textAlign: 'center', }}>
-            <Carousel showArrows={true} autoPlay={true}   >
+            <Carousel showArrows={true} autoPlay={true}  infinite={true} >
                 {
                     images.map((imageUrl, index) => {
                         return (
