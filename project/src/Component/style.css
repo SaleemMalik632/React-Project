@@ -1,3 +1,9 @@
-.img:hover{
+.img:hover {
     transform: scale(1.1);
 }
+
+
+  .cartinfo:hover {
+    transform: translateY(-50%);
+  }
+  
