@@ -18,7 +18,7 @@ const ImageSlider = () => {
         <div style={{ textAlign: 'center', }}>
             <Carousel showArrows={true} autoPlay={true}  infinite={true} >
                 {
-                    images.map((imageUrl, index) => {
+                    images.map((imageUrl, index) => { 
                         return (
                             <div>
                                 <div style={{ maxHeight: '500px' }} >

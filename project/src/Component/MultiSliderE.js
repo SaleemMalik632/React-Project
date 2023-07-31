@@ -76,7 +76,7 @@ const ImageCarousel = () => {
                                             />
                                         </Link>
                                     </div>
-                                </div>
+                                </div> 
                             </Carousel>
                         </>
                     )
