@@ -6,7 +6,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/message", (req, res) => {
-  res.json({ message: " Hello from server!   You need to enable JavaScript to run this app. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quod, inventore placeat odit excepturi officiis reprehenderit a praesentium dolores expedita ullam neque nam iure ipsam quos repellat exercitationem corrupti quaerat!   this requesr is commpi for the serve r " });
+  res.json('You need to enable JavaScript to run this app. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta quod, inventore placeat odit excepturi officiis reprehenderit a praesentium dolores expedita ullam neque nam iure ipsam quos repellat exercitationem corrupti quaerat! This is the mesage form serrver  ');
 });
 
 app.listen(8000, () => {

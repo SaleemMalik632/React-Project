@@ -9,7 +9,6 @@ function App() {
       
       <BrowserRouter>
         <Nav /> 
-   
         <Routes>
           <Route exact path="/" element={< Home />} /> 
           <Route path="/Shoes" element={<Shoesitem/>} />
