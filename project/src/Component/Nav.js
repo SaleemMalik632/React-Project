@@ -82,14 +82,14 @@ function ResponsiveAppBar() {
                                 </MenuItem>
                             ))}
                         </Menu>
-                    </Box>
+                    </Box> 
                     {/* this the code for making the navigation bar and to is sending the randring to the router  */}
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button key={page.title} component={Link} to={page.link} color="inherit" sx={{ mx: 2 }}>
                                <page.Icon  /> 
                                 {page.title}
-                            </Button>
+                            </Button> 
                         ))}
                     </Box>
                     <Box sx={{ flexGrow: 0 }}>

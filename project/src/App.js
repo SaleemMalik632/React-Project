@@ -1,16 +1,15 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Nav from './Component/Nav';
+import Nav from './Component/h';
 import Home from './Component/Home';
 import Shoesitem from './Component/Shoesitem';
 import Apidate from './BackendApi';
 import { ToastContainer } from 'react-toastify';
 function App() {
   return (
-    <div>
-
+    <div>  
       <BrowserRouter>
         <Nav />
-        <ToastContainer />
+        <ToastContainer /> 
         <Routes>
           <Route exact path="/" element={< Home />} />
           <Route path="/Shoes" element={<Shoesitem />} />
