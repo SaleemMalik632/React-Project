@@ -19,14 +19,14 @@ import Logo from './Pics/Ecommerce-Logo-Design-Graphics-32523051-1.jpg';
 
 const pages = [
 
-    { title: 'Home', Icon:HomeIcon ,link: '/' },  
-    { title: 'Shoes', Icon:HomeIcon , link: '/Shoes' },
-    { title: 'T-Shirts',Icon:HomeIcon  ,link: '/T-Shirts' },
-    { title: 'Electronics',Icon:FlashOnIcon  , link: '/Eeletronics' }, 
-    { title: 'Sale', Icon:TrendingDownOutlinedIcon , link: '/sale' }, 
-    { title: 'Become A saler',Icon:PointOfSaleIcon , link: '/saler' },
-    { title: 'More',Icon:ExpandMoreIcon  , link: '/More' },
-    { title: 'Add to Cart',Icon:AddShoppingCartIcon  ,link: '/cart' },  
+    { title: 'Home', Icon: HomeIcon, link: '/' },
+    { title: 'Shoes', Icon: HomeIcon, link: '/Shoes' },
+    { title: 'T-Shirts', Icon: HomeIcon, link: '/T-Shirts' },
+    { title: 'Electronics', Icon: FlashOnIcon, link: '/Eeletronics' },
+    { title: 'Sale', Icon: TrendingDownOutlinedIcon, link: '/sale' },
+    { title: 'Become A saler', Icon: PointOfSaleIcon, link: '/saler' },
+    { title: 'More', Icon: ExpandMoreIcon, link: '/More' },
+    { title: 'Add to Cart', Icon: AddShoppingCartIcon, link: '/cart' },
 
 ];
 
@@ -71,25 +71,25 @@ function ResponsiveAppBar() {
                     <Typography variant="h6" component={Link} to="/" sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
                         <img src={Logo} alt="Your Logo" style={{ display: { xs: 'none', md: 'flex' }, margin: '5px', maxWidth: '80px', borderRadius: '70px' }} />
                         Your best shopping site
-                    </Typography> 
+                    </Typography>
                     {/* for maki the reposive bar  */}
                     <Box sx={{ display: { xs: 'block', md: 'none' } }}>
                         <Menu anchorEl={anchorElNav} keepMounted open={Boolean(anchorElNav)} onClose={handleCloseNavMenu}>
                             {pages.map((page) => (
                                 <MenuItem key={page.title} onClick={handleCloseNavMenu} component={Link} to={page.link}>
-                                    <page.Icon style={{marginRight:"5px"}} /> 
+                                    <page.Icon style={{ marginRight: "5px" }} />
                                     {page.title}
                                 </MenuItem>
                             ))}
                         </Menu>
-                    </Box> 
+                    </Box>
                     {/* this the code for making the navigation bar and to is sending the randring to the router  */}
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
                             <Button key={page.title} component={Link} to={page.link} color="inherit" sx={{ mx: 2 }}>
-                               <page.Icon  /> 
+                                <page.Icon />
                                 {page.title}
-                            </Button> 
+                            </Button>
                         ))}
                     </Box>
                     <Box sx={{ flexGrow: 0 }}>
@@ -114,9 +114,9 @@ function ResponsiveAppBar() {
                         >
                             {settings.map((setting) => (
                                 <MenuItem key={setting.title} component={Link} to={setting.link} onClick={handleCloseUserMenu}>
-                                    <setting.Icon style={{marginRight:'10px'}} />
+                                    <setting.Icon style={{ marginRight: '10px' }} />
                                     {setting.title}
-                                </MenuItem>
+                                </MenuItem> 
                             ))}
                         </Menu>
                     </Box>

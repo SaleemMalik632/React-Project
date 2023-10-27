@@ -9,7 +9,7 @@ function App() {
     <div>  
       <BrowserRouter>
         <Nav />
-        <ToastContainer /> 
+        <ToastContainer />  
         <Routes>
           <Route exact path="/" element={< Home />} />
           <Route path="/Shoes" element={<Shoesitem />} />
